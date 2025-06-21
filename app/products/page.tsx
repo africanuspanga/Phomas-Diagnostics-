@@ -97,7 +97,7 @@ export default function EquipmentPage() {
             {categories.map((category, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow overflow-hidden">
                 <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="relative h-48 md:h-full bg-gray-50">
+                  <div className="relative h-48 md:h-full bg-white">
                     <Image
                       src={category.image || "/placeholder.svg"}
                       alt={category.title}
@@ -291,20 +291,12 @@ export default function EquipmentPage() {
             Can't find what you're looking for? Contact us for custom quotes and specialized equipment sourcing through
             our global network.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700">
               <Link href="/contact">
                 <Mail className="mr-2 h-5 w-5" />
-                Send Inquiry
+                Get in touch
               </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-primary-900"
-            >
-              <Link href="/services">View Services</Link>
             </Button>
           </div>
         </div>
