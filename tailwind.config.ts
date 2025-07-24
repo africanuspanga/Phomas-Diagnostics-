@@ -26,6 +26,7 @@ const config: Config = {
           700: "#0369a1",
           800: "#075985",
           900: "#1e3a8a", // Navy blue from logo
+          950: "#0f172a", // Even darker blue for footer
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
