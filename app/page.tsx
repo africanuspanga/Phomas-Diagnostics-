@@ -122,8 +122,8 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Button asChild className="mt-8 bg-primary-900 hover:bg-primary-800">
-                <Link href="/services">
+              <Button asChild className="mt-8 bg-secondary-600 hover:bg-secondary-700 text-white">
+                <Link href="/contact">
                   Learn More About Our Services <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -143,6 +143,47 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Our Partners Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">Our Partners</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              We collaborate with world-class manufacturers and suppliers to bring you the highest quality medical
+              equipment and laboratory supplies
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+            {/* Partner Logo Placeholders */}
+            {Array.from({ length: 11 }, (_, index) => (
+              <div
+                key={index}
+                className="bg-white border-2 border-gray-200 rounded-lg p-6 hover:border-secondary-600 hover:shadow-lg transition-all duration-300 group"
+              >
+                <div className="aspect-square bg-gray-100 rounded-md flex items-center justify-center group-hover:bg-gray-50 transition-colors">
+                  <div className="text-gray-400 text-center">
+                    <div className="w-12 h-12 mx-auto mb-2 bg-gray-300 rounded"></div>
+                    <span className="text-xs font-medium">Partner {index + 1}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-6">
+              Interested in partnering with us? We're always looking for innovative companies to collaborate with.
+            </p>
+            <Button asChild className="bg-secondary-600 hover:bg-secondary-700 text-white">
+              <Link href="/contact">
+                Become a Partner <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-primary-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -152,8 +193,8 @@ export default function HomePage() {
             medical supply needs.
           </p>
           <div className="flex justify-center">
-            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700">
-              <Link href="/products">View Products</Link>
+            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+              <Link href="/contact">Get Started Today</Link>
             </Button>
           </div>
         </div>

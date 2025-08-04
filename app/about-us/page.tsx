@@ -173,7 +173,7 @@ export default function AboutUsPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700">
+            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
               <Link href="/contact">
                 Partner with Us <ArrowRight className="ml-2 h-5 w-5" />
               </Link>

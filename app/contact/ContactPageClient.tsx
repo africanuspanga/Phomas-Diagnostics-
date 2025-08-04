@@ -224,7 +224,7 @@ export default function ContactPageClient() {
               can't wait.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700">
+              <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
                 <Phone className="mr-2 h-5 w-5" />
                 Call: 0764 266 277
               </Button>

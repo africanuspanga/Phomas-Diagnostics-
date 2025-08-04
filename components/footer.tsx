@@ -4,17 +4,19 @@ import { Phone, MapPin, Clock } from "lucide-react"
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-900 text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           <div className="col-span-1 sm:col-span-2 lg:col-span-2">
-            <Image
-              src="/images/logo.png"
-              alt="Phomas Diagnostics Logo"
-              width={200}
-              height={60}
-              className="h-10 md:h-12 w-auto mb-4"
-            />
+            <div className="relative">
+              <Image
+                src="/images/logo.png"
+                alt="Phomas Diagnostics Logo"
+                width={200}
+                height={60}
+                className="h-10 md:h-12 w-auto mb-4"
+              />
+            </div>
             <p className="text-gray-300 mb-4 text-sm md:text-base leading-relaxed">
               Your trusted partner in laboratory equipment, IVD reagents, consumables, and medical supplies in Tanzania.
             </p>
@@ -29,14 +31,6 @@ export default function Footer() {
                   className="text-gray-300 hover:text-white transition-colors text-sm md:text-base"
                 >
                   About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services"
-                  className="text-gray-300 hover:text-white transition-colors text-sm md:text-base"
-                >
-                  Services
                 </Link>
               </li>
               <li>
