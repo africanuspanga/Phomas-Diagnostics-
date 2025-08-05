@@ -73,17 +73,57 @@ export default function ClinicalChemistryPage() {
                   continues to be the essence of our success in serving Tanzania's healthcare sector.
                 </p>
               </div>
+
+              {/* Download Button moved here */}
+              <div className="mt-8">
+                <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                  <a
+                    href="https://drive.google.com/file/d/1g4SKkn9CSl3VP9n5sbep-6_MMI-0Sdel/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Clinical Chemistry Flier
+                  </a>
+                </Button>
+              </div>
             </div>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/16090_T2.824b8646-8D2L8XsDkgfgMyt1jdidTQo9KHqIQf.png"
-                  alt="Clinical Chemistry Laboratory Equipment"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CC_SYSTEM-IkUVOaCHbrAUgNmh9jofDqEtw6hhuU.png"
+                  alt="HumaStar 300SR Clinical Chemistry Analyzer"
                   width={600}
                   height={500}
                   className="w-full h-auto"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HumaStar Product Line Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">
+              HumaStar Clinical Chemistry Analyzer Series
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Complete range of HumaStar analyzers to meet your laboratory's throughput requirements
+            </p>
+          </div>
+
+          <div className="flex justify-center">
+            <div className="rounded-2xl overflow-hidden shadow-lg max-w-5xl">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CC_Workload%20%285%29-OoGOOPdflu2nPdChrUfFwKw38nUO3B.png"
+                alt="HumaStar Clinical Chemistry Analyzer Series - HumaStar 100, 200, 300SR, and 600"
+                width={1200}
+                height={400}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>
@@ -112,29 +152,6 @@ export default function ClinicalChemistryPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive clinical chemistry product flier to learn more about our complete range of
-              solutions, specifications, and how we can support your laboratory needs.
-            </p>
-            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <a
-                href="https://drive.google.com/file/d/1g4SKkn9CSl3VP9n5sbep-6_MMI-0Sdel/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download Clinical Chemistry Flier
-              </a>
-            </Button>
           </div>
         </div>
       </section>

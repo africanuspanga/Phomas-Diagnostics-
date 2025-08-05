@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { ArrowLeft, Download, CheckCircle } from "lucide-react"
+import { ArrowLeft, Download, CheckCircle, Eye } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -76,13 +76,222 @@ export default function HematologyPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/16450_T2.f4decb44-z2Ka6HqPCVj6P9KL7ZN2jrqzN9WewC.png"
-                  alt="Hematology Analyzer Equipment"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HEM_Pers-S3fqx8VWS8hRV6BXIgKq4fGsyOjKrg.png"
+                  alt="Professional Doctor with HumaSRate ESR Analyzer"
                   width={600}
                   height={500}
                   className="w-full h-auto"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Automated 3-part differentiation Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Automated 3-part differentiation</h2>
+              <h3 className="text-xl font-semibold text-red-600 mb-4">
+                HumaCount 30<sup>TS</sup> | 80<sup>TS</sup>: More precision, less blood smears
+              </h3>
+              <div className="space-y-6 text-lg text-gray-600 mb-8">
+                <p>
+                  HUMAN's 3-part hematology systems provide reliable and precise blood analysis, focusing on essential
+                  parameters such as white blood cells, red blood cells, and platelets. Designed for ease of use and
+                  efficiency, these systems are ideal for small to medium-sized laboratories, supporting accurate
+                  diagnosis and improving workflow in hematology diagnostics.
+                </p>
+                <p>
+                  The models HumaCount 80<sup>TS</sup> and HumaCount 30<sup>TS</sup> can perform 80 or 30 full blood
+                  counts per hour. These systems use highly stable reagents that can be stored at temperatures as high
+                  as 42°C, making them stand out among 3-part analyzers.
+                </p>
+              </div>
+              <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                <Link
+                  href="https://drive.google.com/file/d/1FE9jKq8JPlT9JeuzHTgI2bX-hjnDxRQ3/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Flier
+                </Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HEM_3part-3nA8cD4lWgmGxO2DvL0EliTWrRVVDn.png"
+                  alt="HumaCount 30TS and 80TS Analyzers"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Automated 5-part differentiation Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HEM_5part_2-1MCQZCZdVG9lUE4Z2Vlygy6sRCxrdU.png"
+                  alt="HumaCount 5D Analyzer System"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Automated 5-part differentiation</h2>
+              <h3 className="text-xl font-semibold text-red-600 mb-4">
+                HumaCount 5D | HumaCount 5D<sup>CRP</sup> | HumaCount 5L
+              </h3>
+              <div className="space-y-6 text-lg text-gray-600 mb-8">
+                <p>
+                  The HumaCount 5-part systems combine proven impedance detectors and 3D laser technology to deliver
+                  comprehensive hematology diagnostics. These systems differentiate five types of white blood cells,
+                  including atypical lymphocytes (ALY) and large immature cells (LIC), while also analyzing red blood
+                  cells and platelets.
+                </p>
+                <p>
+                  With models like the HumaCount 5D, HumaCount 5D<sup>CRP</sup>, and HumaCount 5L, HUMAN offers robust
+                  and reliable solutions tailored to the needs of both small and medium-sized labs, as well as larger
+                  laboratories with high throughput demands. The HumaCount 5D<sup>CRP</sup> offers the possibility of
+                  simultaneous measurement of CRP and 5-part diff parameters out of one and the same sample.
+                </p>
+                <p>
+                  Our hematology systems have been on the market for many years with excellent references regarding
+                  robustness and reliability and meet all requirements of a hematological laboratory.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                  <Link
+                    href="https://drive.google.com/file/d/1hLiXpAy1rM59zQzbXQdszNnzxgCcY5O9/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    HumaCount 5D Flier
+                  </Link>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-secondary-600 text-secondary-600 hover:bg-secondary-600 hover:text-white bg-transparent"
+                >
+                  <Link
+                    href="https://drive.google.com/file/d/13jbf4mTeK_DrN00VFZh-fsU2K8QH--9z/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Download className="mr-2 h-5 w-5" />
+                    HumaCount 5D<sup>CRP</sup> Flier
+                  </Link>
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hematocrit Measurement Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Hematocrit Measurement</h2>
+              <h3 className="text-xl font-semibold text-red-600 mb-4">
+                HuMax HCT - Hematocrit and microliter benchtop centrifuge
+              </h3>
+              <div className="space-y-6 text-lg text-gray-600 mb-8">
+                <p>Measure hematocrit with the gold standard method. Fast, easy and reliable.</p>
+                <p>
+                  The programmable microprocessor controlled system is equipped with a maintenance-free brushless
+                  induction motor and is delivered with a 24 single segment rotor for hematocrit capillaries.
+                </p>
+              </div>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-white bg-transparent"
+              >
+                <Link href="/products">
+                  <Eye className="mr-2 h-5 w-5" />
+                  View Products
+                </Link>
+              </Button>
+            </div>
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HEM_HEMA-m7Y3u5XCzhsMFC2R2HzJkBOXPdRBMn.png"
+                  alt="HuMax HCT Hematocrit Centrifuge"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ESR Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HEM_ESR-susaUkhpedIymRrz6zftTuyqi2aCKF.png"
+                  alt="HumaSRate 24PT ESR Analyzer"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
+                Erythrocyte Sedimentation Rate (ESR)
+              </h2>
+              <h3 className="text-xl font-semibold text-red-600 mb-4">
+                HumaSRate 24<sup>PT</sup> – Sets new standards in ESR automation
+              </h3>
+              <div className="space-y-6 text-lg text-gray-600 mb-8">
+                <p>
+                  HUMAN's ESR (erythrocyte sedimentation rate) system is suitable for small to medium sized labs. The
+                  use of primary EDTA tubes for ESR reading is cost effective because no additional ESR tube is
+                  required.
+                </p>
+                <p>
+                  HumaSRate 24<sup>PT</sup> offers the flexibility to run ESR tests at any time without additional blood
+                  collection.
+                </p>
+              </div>
+              <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                <Link
+                  href="https://drive.google.com/file/d/1BFZiMP57QZsGbQY318tWbSlb0BLXhLR-/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Flier
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -109,23 +318,6 @@ export default function HematologyPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive hematology solutions flier to learn more about our complete range of analyzers,
-              specifications, and how we can support your laboratory needs.
-            </p>
-            <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <Download className="mr-2 h-5 w-5" />
-              Download Hematology Solutions Flier
-            </Button>
           </div>
         </div>
       </section>
