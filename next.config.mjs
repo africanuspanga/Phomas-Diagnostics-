@@ -9,6 +9,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  experimental: {
+    // Disable LightningCSS optimization to avoid WASM fetch issues in the browser runtime
+    optimizeCss: false,
+  },
 }
 
 export default nextConfig

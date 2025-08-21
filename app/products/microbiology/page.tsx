@@ -82,11 +82,12 @@ export default function MicrobiologyPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/real-time-pcr-1-JOSyHoZKE7v73jeuMvMnJkGUqNda37.webp"
-                  alt="Microbiology Laboratory Equipment - Real-time PCR System"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Animal-Based-Culture-Media-8XT6VmmfvcAWNH2YruTVU41HQek1a2.avif"
+                  alt="Animal-based culture media used for microbiology applications"
                   width={600}
                   height={500}
-                  className="w-full h-auto"
+                  className="w-full h-auto object-contain bg-white"
+                  priority
                 />
               </div>
             </div>
@@ -331,11 +332,11 @@ export default function MicrobiologyPage() {
             <div className="relative order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Biochemical%20Reagents.jpg-0BnagSOHUey0p4dNuN33rNN93RHeD3.jpeg"
-                  alt="Biochemical Tests for Microbial Identification"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot_2025-08-11_at_16.01.11-removebg-preview-YRhp3Bf52HIC9HyFOw32XwhEXzhCvu.png"
+                  alt="Catalase / Oxy Test kit used for microbial identification"
                   width={600}
                   height={400}
-                  className="w-full h-auto"
+                  className="w-full h-auto object-contain bg-white"
                 />
               </div>
             </div>

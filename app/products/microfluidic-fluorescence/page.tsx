@@ -82,13 +82,33 @@ export default function MicrofluidicFluorescencePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image20230825162425-w45ujsfA62hBB2gKF3LTfYO6YxeQQj.webp"
-                  alt="Microfluidic Fluorescence Immunoassay Equipment"
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screenshot%202025-08-05%20at%2017.25.48-9OHMrlmksXvTVENqiTrHOElsMHfnxS.png"
+                  alt="VACURE Microfluidic Fluorescence Immunoassay Analyzer"
                   width={600}
                   height={500}
                   className="w-full h-auto"
                 />
               </div>
+            </div>
+          </div>
+
+          <div className="max-w-4xl mx-auto mt-16 text-center">
+            <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary-900 mb-4">Get Detailed Product Information</h3>
+              <p className="text-lg text-gray-600 mb-6 max-w-2xl mx-auto">
+                Download our comprehensive microfluidic fluorescence immunoassay flier to learn more about our advanced
+                technology platforms and testing capabilities.
+              </p>
+              <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white" asChild>
+                <a
+                  href="https://drive.google.com/file/d/1pYqWy_P9az-Dm6AwmqKQJzK7ZEjZgafc/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Microfluidic Technology Flier
+                </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -115,23 +135,6 @@ export default function MicrofluidicFluorescencePage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive microfluidic fluorescence immunoassay flier to learn more about our advanced
-              technology platforms, testing capabilities, and how we can support your diagnostic needs.
-            </p>
-            <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <Download className="mr-2 h-5 w-5" />
-              Download Microfluidic Technology Flier
-            </Button>
           </div>
         </div>
       </section>
