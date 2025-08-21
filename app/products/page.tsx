@@ -32,23 +32,20 @@ export default function ProductsPage() {
       title: "MICROBIOLOGY",
       description:
         "Comprehensive microbiology solutions for pathogen identification and antimicrobial susceptibility testing.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/P7700-S1LRG.jpg-fy49SwAah4VIxEcc0Tl4C087lBkJzs.jpeg",
+      image: "/images/culture-media.avif",
     },
     {
       id: "microfluidic-fluorescence",
       title: "Microfluidic Fluorescence Immunoassay",
       description: "Advanced microfluidic technology for precise fluorescence-based immunoassays with rapid results.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image20230825162425-w45ujsfA62hBB2gKF3LTfYO6YxeQQj.webp",
+      image: "/images/vacure-device.png",
     },
     {
       id: "blood-gas",
       title: "Blood Gas & Electrolyte",
       description:
         "Critical care blood gas analyzers for rapid and accurate patient monitoring in emergency and intensive care settings.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BLOODGAS__ILWW__GEM5000-CHEMSTAT.jpg-lNcUPtMMy6EAOuRVuQQcbI5SU0QeQA.jpeg",
+      image: "/images/diagnostic-analyzer.png",
     },
     {
       id: "rapid-test",
@@ -70,8 +67,7 @@ export default function ProductsPage() {
       title: "Laboratory Equipment",
       description:
         "Diverse range of high-quality laboratory equipment designed to meet the needs of laboratories worldwide, from essential tools to specialized instruments.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/D1320062667690-20160908130113319-JPG.6d765be7.jpg-CKDx18VS6TmHDxYMP2XDrZSFXDM7uC.jpeg",
+      image: "/images/lab-pipettes.png",
     },
     {
       id: "auto-immune",

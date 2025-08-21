@@ -1,6 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { ArrowLeft } from "lucide-react"
 
 export const metadata = {
   title: "Blood Gas & Electrolyte Analyzer | Phomas Diagnostics",
@@ -12,15 +13,28 @@ export default function BloodGasPage() {
   return (
     <main className="min-h-screen">
       {/* Hero */}
-      <section className="relative">
+      <section className="relative bg-gradient-to-r from-primary-900 to-secondary-700 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div className="mb-8">
+            <Button
+              variant="outline"
+              asChild
+              className="text-white border-white hover:bg-white hover:text-primary-900 bg-transparent"
+            >
+              <Link href="/products" className="inline-flex items-center gap-2">
+                <ArrowLeft className="h-4 w-4" />
+                Back to Products
+              </Link>
+            </Button>
+          </div>
+
           <div className="grid gap-10 md:grid-cols-2 md:items-center">
             {/* Hero copy */}
             <div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight">
                 Eaglenos Blood Gas & Electrolyte Analyzer
               </h1>
-              <p className="mt-4 text-base sm:text-lg text-muted-foreground">
+              <p className="mt-4 text-base sm:text-lg text-white/90">
                 Fast, precise, and reliable measurements for blood gases and electrolytes in clinical settings. Designed
                 for efficiency with an intuitive touchscreen interface.
               </p>
@@ -87,6 +101,17 @@ export default function BloodGasPage() {
               <li>Reliable, consistent performance</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="py-8 border-t">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <Button variant="outline" asChild>
+            <Link href="/products" className="inline-flex items-center gap-2">
+              <ArrowLeft className="h-4 w-4" />
+              Back to All Products
+            </Link>
+          </Button>
         </div>
       </section>
     </main>

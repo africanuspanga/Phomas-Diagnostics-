@@ -87,6 +87,22 @@ export default function CoagulationPage() {
                   className="w-full h-auto"
                 />
               </div>
+              <div className="mt-6 text-center">
+                <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-primary-900 mb-3">Get Product Details</h3>
+                  <p className="text-sm text-gray-600 mb-4">Download our comprehensive coagulation testing flier</p>
+                  <Button asChild size="sm" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                    <a
+                      href="https://drive.google.com/file/d/1txlsLPiQtbTxIOdyvfML2B7cyyphJJ_I/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="mr-2 h-4 w-4" />
+                      Download Flier
+                    </a>
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -113,29 +129,6 @@ export default function CoagulationPage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive coagulation testing flier to learn more about our complete range of analyzers,
-              reagents, and how we can support your laboratory needs.
-            </p>
-            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <a
-                href="https://drive.google.com/file/d/1txlsLPiQtbTxIOdyvfML2B7cyyphJJ_I/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download Coagulation Testing Flier
-              </a>
-            </Button>
           </div>
         </div>
       </section>

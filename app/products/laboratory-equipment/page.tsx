@@ -79,12 +79,23 @@ export default function LaboratoryEquipmentPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/D1320062667690-20160908130113319-JPG.6d765be7.jpg-CKDx18VS6TmHDxYMP2XDrZSFXDM7uC.jpeg"
-                  alt="Laboratory Equipment and Instruments"
+                  src="/images/lab-centrifuges.png"
+                  alt="Laboratory Centrifuges - HuMax Series"
                   width={600}
                   height={500}
                   className="w-full h-auto"
                 />
+              </div>
+              <div className="mt-6">
+                <Card className="bg-gradient-to-br from-primary-50 to-secondary-50">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-lg font-semibold text-primary-900 mb-3">Product Information</h3>
+                    <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                      <Download className="mr-2 h-5 w-5" />
+                      Download Equipment Flier
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -113,22 +124,23 @@ export default function LaboratoryEquipmentPage() {
               </Card>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Download Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive laboratory equipment flier to learn more about our complete range of
-              instruments, specifications, and how we can support your laboratory needs.
-            </p>
-            <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <Download className="mr-2 h-5 w-5" />
-              Download Laboratory Equipment Flier
-            </Button>
+          <div className="mt-16 text-center">
+            <div className="max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-primary-900 mb-6">Precision Temperature Control</h3>
+              <div className="rounded-2xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/lab-incubator.png"
+                  alt="Laboratory Incubators and Water Baths"
+                  width={500}
+                  height={400}
+                  className="w-full h-auto"
+                />
+              </div>
+              <p className="text-gray-600 mt-4">
+                Advanced incubators and water baths for precise temperature control in your laboratory processes
+              </p>
+            </div>
           </div>
         </div>
       </section>
