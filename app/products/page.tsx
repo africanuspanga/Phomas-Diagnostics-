@@ -52,44 +52,42 @@ export default function ProductsPage() {
       title: "RAPID TEST",
       description:
         "Quick and reliable rapid diagnostic tests for immediate results in point-of-care testing environments.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/rapid-test-kits.jpeg",
     },
     {
       id: "coagulation",
       title: "COAGULATION",
       description:
         "Comprehensive coagulation testing solutions for accurate hemostasis diagnostics with advanced analyzers and quality reagents.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/15800_HumaClot-Pro_Open_Sideview_15800_17112016172135-20161118070934358.64871b54-LSkSz7PCNPpRlNwksCyS9pSWbbyIkC.png",
+      image: "/images/coagulation-analyzers.png",
     },
     {
       id: "laboratory-equipment",
       title: "Laboratory Equipment",
       description:
         "Diverse range of high-quality laboratory equipment designed to meet the needs of laboratories worldwide, from essential tools to specialized instruments.",
-      image: "/images/lab-pipettes.png",
+      image: "/images/microscope.jpeg",
     },
     {
       id: "auto-immune",
       title: "HUMAN-IMTEC Autoimmune Diagnostics",
       description:
         "Advanced autoimmune diagnostic solutions for detecting autoimmune diseases with precision and reliability.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/643f4a5ee09dd-qum9SNUJkwSi2BtpkSIwkYXgCAcpsg.png",
+      image: "/images/aid-instruments-updated.png",
     },
     {
       id: "general-medical-equipment",
       title: "GENERAL MEDICAL EQUIPMENT",
       description:
         "Comprehensive range of general medical equipment for healthcare facilities, including monitoring devices and essential medical instruments.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/lab-machines.png",
     },
     {
       id: "urinary",
       title: "urinalysis",
       description:
         "Complete urinalysis solutions including automated analyzers and reagent strips for comprehensive urine testing.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uf-5000_v3_466x540-fRT6wZ5IZ9dx1corlT35i125c0CvXK.png",
+      image: "/images/humacomb-urine.png",
     },
     {
       id: "tb-lamp",
@@ -104,7 +102,7 @@ export default function ProductsPage() {
       title: "CONSUMABLES",
       description:
         "Essential laboratory consumables including reagents, test strips, and disposable items for daily laboratory operations.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/images/lab-consumables.jpeg",
     },
   ]
 

@@ -76,12 +76,22 @@ export default function AutoImmunePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/643f4a5ee09dd-qum9SNUJkwSi2BtpkSIwkYXgCAcpsg.png"
-                  alt="Autoimmune Diagnostic Equipment"
+                  src="/images/aid-instruments.png"
+                  alt="AID Autoimmune Diagnostic Instruments"
                   width={600}
                   height={500}
                   className="w-full h-auto"
                 />
+              </div>
+
+              <div className="mt-6">
+                <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl p-6 text-center">
+                  <h3 className="text-lg font-semibold text-primary-900 mb-3">Get Product Information</h3>
+                  <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                    <Download className="mr-2 h-5 w-5" />
+                    Download Autoimmune Diagnostics Flier
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
@@ -109,23 +119,6 @@ export default function AutoImmunePage() {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Download Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
-            <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive autoimmune diagnostics flier to learn more about our complete range of test
-              systems, analyzers, and how we can support your laboratory needs.
-            </p>
-            <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <Download className="mr-2 h-5 w-5" />
-              Download Autoimmune Diagnostics Flier
-            </Button>
           </div>
         </div>
       </section>

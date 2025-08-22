@@ -90,6 +90,24 @@ export default function TbLampPage() {
                   className="w-full h-auto"
                 />
               </div>
+              <div className="mt-6">
+                <Card className="bg-gradient-to-br from-primary-50 to-secondary-50">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-primary-900 mb-3">Download Product Information</h3>
+                    <p className="text-gray-600 mb-4">Get detailed TB-LAMP testing specifications</p>
+                    <Button asChild className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                      <a
+                        href="https://drive.google.com/file/d/1rjhdnQ3yjCStPSOiGqfAWEyjQD4L9G3G/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Download className="mr-2 h-4 w-4" />
+                        Download TB-LAMP Flier
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
@@ -124,20 +142,13 @@ export default function TbLampPage() {
       <Section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">TB Control Solutions</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive TB-LAMP testing flier to learn more about our innovative tuberculosis detection
-              technology, testing capabilities, and how we can support your TB control programs.
+              Learn how our TB-LAMP technology can enhance your tuberculosis control programs with rapid, accurate
+              detection and drug resistance testing capabilities.
             </p>
-            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <a
-                href="https://drive.google.com/file/d/1rjhdnQ3yjCStPSOiGqfAWEyjQD4L9G3G/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download TB-LAMP Testing Flier
-              </a>
+            <Button asChild size="lg" className="bg-primary-900 hover:bg-primary-800 text-white">
+              <Link href="/contact">Request TB Solutions Consultation</Link>
             </Button>
           </div>
         </div>

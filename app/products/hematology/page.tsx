@@ -76,8 +76,8 @@ export default function HematologyPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-08-11%20at%2009.12.31-IfXhptzgQt4f582C0Tkdx89xCdr6yL.jpeg"
-                  alt="HumaCount 5D CRP hematology analyzer front view"
+                  src="/images/humacount-5d.avif"
+                  alt="HumaCount 5D Hematology Analyzer"
                   width={600}
                   height={500}
                   className="w-full h-auto object-contain bg-white"

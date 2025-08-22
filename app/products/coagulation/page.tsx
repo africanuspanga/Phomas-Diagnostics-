@@ -80,8 +80,8 @@ export default function CoagulationPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/15800_HumaClot-Pro_Open_Sideview_15800_17112016172135-20161118070934358.64871b54-LSkSz7PCNPpRlNwksCyS9pSWbbyIkC.png"
-                  alt="Coagulation Testing Equipment"
+                  src="/images/huma-clots.png"
+                  alt="HumaClot Coagulation Analyzers - Made in Germany"
                   width={600}
                   height={500}
                   className="w-full h-auto"

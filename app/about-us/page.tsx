@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, MapPin, Users, Globe, ArrowRight } from "lucide-react"
+import { Calendar, MapPin, Users, Globe, ArrowRight, Award, Microscope, TestTube, Heart } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -35,6 +35,33 @@ export default function AboutUsPage() {
     },
   ]
 
+  const expertiseAreas = [
+    {
+      icon: <Microscope className="h-8 w-8" />,
+      title: "Clinical Diagnostics",
+      description:
+        "Advanced analyzers for clinical chemistry, hematology, and coagulation testing with throughput from 30-80 samples per hour",
+    },
+    {
+      icon: <TestTube className="h-8 w-8" />,
+      title: "Laboratory Equipment",
+      description:
+        "Precision instruments including HumaPette pipettes, centrifuges, incubators, and water purification systems",
+    },
+    {
+      icon: <Heart className="h-8 w-8" />,
+      title: "Critical Care Solutions",
+      description:
+        "Blood gas analyzers, electrolyte systems, and point-of-care devices for emergency and intensive care applications",
+    },
+    {
+      icon: <Award className="h-8 w-8" />,
+      title: "Quality Assurance",
+      description:
+        "CE-marked products meeting European standards with comprehensive quality control materials and calibrators",
+    },
+  ]
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -43,7 +70,7 @@ export default function AboutUsPage() {
           <div className="text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Phomas Diagnostics</h1>
             <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-              Advancing health, research, and innovation in Tanzania since 2018
+              Tanzania's premier medical supply partner, advancing healthcare innovation since 2018
             </p>
           </div>
         </div>
@@ -59,25 +86,27 @@ export default function AboutUsPage() {
                 <p>
                   Phomas Diagnostics and Medical Supplies Ltd was founded in 2018 and is headquartered in Dar es Salaam,
                   Tanzania. We are a registered distributor specializing in laboratory equipment, IVD reagents, medical
-                  supplies, and consumables.
+                  supplies, and consumables for healthcare facilities nationwide.
                 </p>
                 <p>
                   Our mission is to support the scientific, healthcare, research, and industrial sectors by providing
-                  reliable, high-quality products and exceptional service that meets international standards.
+                  reliable, high-quality products and exceptional service that meets international standards. With over
+                  30 years of combined experience in autoimmune diagnostics and laboratory solutions, we deliver proven
+                  expertise to our clients.
                 </p>
                 <p>
-                  Through our strategic partnership with Avantor/VWR — a global leader in the supply of production
-                  products for science laboratories, pharmaceutical manufacturers, universities, research institutions,
-                  and the food production industry — we offer customers in Tanzania access to over 4 million laboratory
-                  and production products.
+                  Through our strategic partnership with Avantor/VWR and leading global manufacturers like Human
+                  Diagnostics, BioMérieux, and Tulip Diagnostics, we offer customers in Tanzania access to over 4
+                  million laboratory and production products, from clinical chemistry analyzers to precision laboratory
+                  instruments.
                 </p>
               </div>
             </div>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/about-scientist.jpeg"
-                  alt="Professional Scientist Using Microscope"
+                  src="/images/about-us-doctor.jpeg"
+                  alt="Professional Doctor in Medical Office"
                   width={500}
                   height={400}
                   className="w-full h-auto"
@@ -117,15 +146,39 @@ export default function AboutUsPage() {
               <div className="bg-secondary-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                 <Users className="h-8 w-8" />
               </div>
-              <h3 className="text-3xl font-bold text-primary-900 mb-2">100+</h3>
-              <p className="text-gray-600">Satisfied Clients</p>
+              <h3 className="text-3xl font-bold text-primary-900 mb-2">30+</h3>
+              <p className="text-gray-600">Years Experience</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Timeline */}
       <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">Our Expertise</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive solutions across all major laboratory disciplines with proven reliability and technical
+              excellence
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {expertiseAreas.map((area, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                <CardContent className="p-6">
+                  <div className="flex justify-center mb-4 text-secondary-600">{area.icon}</div>
+                  <h3 className="text-xl font-semibold text-primary-900 mb-3">{area.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">{area.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-4">Our Journey</h2>
@@ -160,14 +213,16 @@ export default function AboutUsPage() {
               <h3 className="text-2xl font-bold mb-4 text-secondary-400">Our Mission</h3>
               <p className="text-lg text-gray-200">
                 To support the scientific, healthcare, research, and industrial sectors by providing reliable,
-                high-quality products and exceptional service that meets international standards.
+                high-quality products and exceptional service that meets international standards. We deliver CE-marked
+                equipment with comprehensive technical support to ensure optimal laboratory performance.
               </p>
             </div>
             <div className="text-center lg:text-left">
               <h3 className="text-2xl font-bold mb-4 text-secondary-400">Our Vision</h3>
               <p className="text-lg text-gray-200">
                 To be Tanzania's leading partner in advancing health, research, and innovation through world-class
-                medical supplies and laboratory equipment.
+                medical supplies and laboratory equipment. We envision a future where every healthcare facility has
+                access to reliable diagnostic solutions that improve patient outcomes.
               </p>
             </div>
           </div>

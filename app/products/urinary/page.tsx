@@ -76,12 +76,30 @@ export default function UrinaryPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/uf-5000_v3_466x540-fRT6wZ5IZ9dx1corlT35i125c0CvXK.png"
-                  alt="Urinalysis Laboratory Equipment - UF-5000 Analyzer"
+                  src="/images/humacomb-urine.png"
+                  alt="HumaCombilyzer Urine Analysis System with Test Strips"
                   width={600}
                   height={500}
                   className="w-full h-auto"
                 />
+              </div>
+              <div className="mt-6">
+                <Card className="bg-gradient-to-br from-primary-50 to-secondary-50">
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-primary-900 mb-3">Download Product Information</h3>
+                    <p className="text-gray-600 mb-4">Get detailed specifications and technical information</p>
+                    <Button asChild className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                      <a
+                        href="https://drive.google.com/file/d/1-6jBKMyWSNGQz14B4SPUnndLzAZFN_ap/view?usp=sharing"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Download className="mr-2 h-4 w-4" />
+                        Download Urinalysis Flier
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
@@ -117,20 +135,13 @@ export default function UrinaryPage() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Get Detailed Product Information</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Complete Urinalysis Solutions</h2>
             <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-              Download our comprehensive urinalysis solutions flier to learn more about our complete range of analyzers,
-              test strips, and how we can support your laboratory needs.
+              Explore our full range of urinalysis equipment including the HumaVision AI microscopy system,
+              HumaCombilyzer strip readers, and comprehensive testing solutions for modern laboratories.
             </p>
-            <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-              <a
-                href="https://drive.google.com/file/d/1-6jBKMyWSNGQz14B4SPUnndLzAZFN_ap/view?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Download className="mr-2 h-5 w-5" />
-                Download Urinalysis Solutions Flier
-              </a>
+            <Button asChild size="lg" className="bg-primary-900 hover:bg-primary-800 text-white">
+              <Link href="/contact">Request Consultation</Link>
             </Button>
           </div>
         </div>

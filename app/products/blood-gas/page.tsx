@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowLeft } from "lucide-react"
+import { ArrowLeft, Download } from "lucide-react"
 
 export const metadata = {
   title: "Blood Gas & Electrolyte Analyzer | Phomas Diagnostics",
@@ -58,30 +58,41 @@ export default function BloodGasPage() {
       </section>
 
       {/* Download CTA - placed immediately below the hero text and image */}
-      <section aria-labelledby="downloads-title" className="bg-muted/30 py-6">
+      <section aria-labelledby="downloads-title" className="bg-gradient-to-r from-secondary-600 to-secondary-700 py-8">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 id="downloads-title" className="sr-only">
-            Downloads
+          <h2 id="downloads-title" className="text-2xl font-bold text-white text-center mb-6">
+            📥 Download Product Fliers
           </h2>
-          <div className="flex flex-col items-start gap-4 rounded-xl border bg-background p-4 sm:flex-row sm:items-center sm:justify-between">
-            <p className="text-sm sm:text-base text-muted-foreground">Download product fliers:</p>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild>
+          <div className="flex flex-col items-center gap-6 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-6 sm:flex-row sm:justify-center">
+            <p className="text-lg font-medium text-white">Get detailed specifications:</p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-secondary-700 hover:bg-gray-100 font-semibold shadow-lg"
+              >
                 <Link
                   href="https://drive.google.com/file/d/1LTUSQ0xTFIorho1xQ49PU0VpsVLeSs1_/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Eaglenos — Blood Gas (ZS)
+                  <Download className="mr-2 h-5 w-5" />
+                  Eaglenos Blood Gas Flier
                 </Link>
               </Button>
-              <Button variant="secondary" asChild>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-secondary-700 font-semibold bg-transparent"
+              >
                 <Link
                   href="https://drive.google.com/file/d/1n6Aqvc3w0AQBty7a5qs-eYB3j9g0sDX8/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Eaglenos — Electrolyte (ZS)
+                  <Download className="mr-2 h-5 w-5" />
+                  Eaglenos Electrolyte Flier
                 </Link>
               </Button>
             </div>

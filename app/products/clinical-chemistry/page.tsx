@@ -56,6 +56,23 @@ export default function ClinicalChemistryPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">
                 Advanced Clinical Chemistry Solutions
               </h2>
+
+              <div className="mb-8">
+                <div className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl p-6 text-center">
+                  <h3 className="text-lg font-semibold text-primary-900 mb-3">Download Product Information</h3>
+                  <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
+                    <a
+                      href="https://drive.google.com/file/d/1g4SKkn9CSl3VP9n5sbep-6_MMI-0Sdel/view?usp=sharing"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Download className="mr-2 h-5 w-5" />
+                      Download Clinical Chemistry Flier
+                    </a>
+                  </Button>
+                </div>
+              </div>
+
               <div className="space-y-6 text-lg text-gray-600">
                 <p>
                   As Tanzania's leading medical equipment supplier, Phomas Diagnostics provides a comprehensive range of
@@ -72,20 +89,6 @@ export default function ClinicalChemistryPage() {
                   Our fast-growing line of high-quality products – all meeting high European standards (CE mark) –
                   continues to be the essence of our success in serving Tanzania's healthcare sector.
                 </p>
-              </div>
-
-              {/* Download Button moved here */}
-              <div className="mt-8">
-                <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
-                  <a
-                    href="https://drive.google.com/file/d/1g4SKkn9CSl3VP9n5sbep-6_MMI-0Sdel/view?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Clinical Chemistry Flier
-                  </a>
-                </Button>
               </div>
             </div>
             <div className="relative">
