@@ -51,7 +51,7 @@ export default function ContactPageClient() {
     {
       icon: <Phone className="h-6 w-6 text-secondary-600" />,
       title: "Phone",
-      details: ["0764 266 277"],
+      details: ["0678 389 075", "0755 378 111", "0764 266 277"],
     },
     {
       icon: <Clock className="h-6 w-6 text-secondary-600" />,
@@ -61,7 +61,7 @@ export default function ContactPageClient() {
     {
       icon: <Mail className="h-6 w-6 text-secondary-600" />,
       title: "Email",
-      details: ["info@phomasdiagnostics.co.tz"],
+      details: ["info@phomasdiagnosticstz.com"],
     },
   ]
 
@@ -90,7 +90,7 @@ export default function ContactPageClient() {
                   <h3 className="text-lg font-semibold text-primary-900 mb-3">{info.title}</h3>
                   <div className="space-y-1">
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-gray-600 text-sm">
+                      <p key={detailIndex} className="text-gray-600 text-sm md:text-base">
                         {detail}
                       </p>
                     ))}
@@ -226,12 +226,12 @@ export default function ContactPageClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white">
                 <Phone className="mr-2 h-5 w-5" />
-                Call: 0764 266 277
+                Call: 0678 389 075
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-white"
+                className="border-primary-900 text-primary-900 hover:bg-primary-900 hover:text-white bg-transparent"
               >
                 <Mail className="mr-2 h-5 w-5" />
                 Email Us

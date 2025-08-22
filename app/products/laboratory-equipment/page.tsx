@@ -79,8 +79,8 @@ export default function LaboratoryEquipmentPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/lab-centrifuges.png"
-                  alt="Laboratory Centrifuges - HuMax Series"
+                  src="/images/magnus-microscope-lab-equipment.jpeg"
+                  alt="Magnus MLX Plus Laboratory Microscope"
                   width={600}
                   height={500}
                   className="w-full h-auto"

@@ -84,21 +84,20 @@ export default function AboutUsPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-primary-900 mb-6">Our Story</h2>
               <div className="space-y-6 text-lg text-gray-600">
                 <p>
-                  Phomas Diagnostics and Medical Supplies Ltd was founded in 2018 and is headquartered in Dar es Salaam,
-                  Tanzania. We are a registered distributor specializing in laboratory equipment, IVD reagents, medical
-                  supplies, and consumables for healthcare facilities nationwide.
+                  In 2018, we embarked on a mission that would transform how healthcare facilities across Tanzania
+                  access world-class medical equipment and diagnostic solutions. What started as a vision has grown into
+                  Tanzania's most trusted medical supply partnership.
                 </p>
                 <p>
-                  Our mission is to support the scientific, healthcare, research, and industrial sectors by providing
-                  reliable, high-quality products and exceptional service that meets international standards. With over
-                  30 years of combined experience in autoimmune diagnostics and laboratory solutions, we deliver proven
-                  expertise to our clients.
+                  Our founders recognized a critical gap in Tanzania's healthcare infrastructure: while the country had
+                  skilled medical professionals and growing healthcare facilities, access to reliable, high-quality
+                  diagnostic equipment remained limited. We set out to change that reality.
                 </p>
                 <p>
-                  Through our strategic partnership with Avantor/VWR and leading global manufacturers like Human
-                  Diagnostics, BioMérieux, and Tulip Diagnostics, we offer customers in Tanzania access to over 4
-                  million laboratory and production products, from clinical chemistry analyzers to precision laboratory
-                  instruments.
+                  By building strategic partnerships with world-renowned manufacturers like Human Diagnostics,
+                  BioMérieux, and Tulip Diagnostics, we created a bridge between global innovation and local healthcare
+                  needs. Through our partnership with Avantor/VWR, we now provide access to over 4 million laboratory
+                  and production products.
                 </p>
               </div>
             </div>

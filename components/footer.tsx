@@ -70,9 +70,13 @@ export default function Footer() {
                   Dar es Salaam TZ 76317
                 </p>
               </div>
-              <div className="flex items-center justify-center sm:justify-start">
-                <Phone className="h-4 w-4 md:h-5 md:w-5 text-secondary-600 mr-2" />
-                <p className="text-gray-300 text-sm md:text-base">0764 266 277</p>
+              <div className="flex items-start justify-center sm:justify-start">
+                <Phone className="h-4 w-4 md:h-5 md:w-5 text-secondary-600 mt-0.5 mr-2 flex-shrink-0" />
+                <div className="text-gray-300 text-sm md:text-base">
+                  <p>0678 389 075</p>
+                  <p>0755 378 111</p>
+                  <p>0764 266 277</p>
+                </div>
               </div>
               <div className="flex items-start justify-center sm:justify-start">
                 <Clock className="h-4 w-4 md:h-5 md:w-5 text-secondary-600 mt-0.5 mr-2 flex-shrink-0" />

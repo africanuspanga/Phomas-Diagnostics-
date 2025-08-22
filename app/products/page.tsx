@@ -25,7 +25,7 @@ export default function ProductsPage() {
       title: "HEMATOLOGY ANALYZER",
       description:
         "Automated hematology (CBC) products designed for small to large laboratories, offering throughput ranges from 30 to 80 samples per hour.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/HEM_ESR-fYPHVzEE4v5ipWDTPDnIw60bfZEx1F.png",
+      image: "/images/humacount-5d-lab-equipment.avif",
     },
     {
       id: "microbiology",
@@ -66,7 +66,7 @@ export default function ProductsPage() {
       title: "Laboratory Equipment",
       description:
         "Diverse range of high-quality laboratory equipment designed to meet the needs of laboratories worldwide, from essential tools to specialized instruments.",
-      image: "/images/microscope.jpeg",
+      image: "/images/magnus-microscope-hematology.jpeg",
     },
     {
       id: "auto-immune",
