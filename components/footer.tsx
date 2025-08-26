@@ -73,9 +73,9 @@ export default function Footer() {
               <div className="flex items-start justify-center sm:justify-start">
                 <Phone className="h-4 w-4 md:h-5 md:w-5 text-secondary-600 mt-0.5 mr-2 flex-shrink-0" />
                 <div className="text-gray-300 text-sm md:text-base">
-                  <p>0678 389 075</p>
-                  <p>0755 378 111</p>
                   <p>0764 266 277</p>
+                  <p>0755 378 111</p>
+                  <p>0678 389 075</p>
                 </div>
               </div>
               <div className="flex items-start justify-center sm:justify-start">

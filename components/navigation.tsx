@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ShoppingCart } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export default function Navigation() {
@@ -32,7 +32,7 @@ export default function Navigation() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -42,6 +42,15 @@ export default function Navigation() {
                 {item.label}
               </Link>
             ))}
+            <Link
+              href="https://shop.phomasdiagnosticstz.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-primary-900 text-white hover:bg-primary-800 px-4 py-2 rounded-md text-sm font-medium transition-colors"
+            >
+              <ShoppingCart className="h-4 w-4" />
+              SHOP
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -66,6 +75,16 @@ export default function Navigation() {
                   {item.label}
                 </Link>
               ))}
+              <Link
+                href="https://shop.phomasdiagnosticstz.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 bg-primary-900 text-white hover:bg-primary-800 px-3 py-3 rounded-md text-base font-medium transition-colors"
+                onClick={() => setIsOpen(false)}
+              >
+                <ShoppingCart className="h-4 w-4" />
+                SHOP
+              </Link>
             </div>
           </div>
         )}
