@@ -7,7 +7,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
-import { MapPin, Phone, Clock, Mail, Send } from "lucide-react"
+import { MapPin, Phone, Clock, Mail, Send, ExternalLink } from "lucide-react"
 
 export default function ContactPageClient() {
   const [formData, setFormData] = useState({
@@ -98,6 +98,67 @@ export default function ContactPageClient() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Visit Our Offices Section */}
+          <div className="mb-16">
+            <Card>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl md:text-3xl text-primary-900">Visit Our Offices</CardTitle>
+                <p className="text-gray-600 text-sm md:text-base">
+                  Come visit us at our Dar es Salaam location for personalized service and product demonstrations.
+                </p>
+              </CardHeader>
+              <CardContent className="p-4 md:p-6">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                  <div className="space-y-4">
+                    <div className="flex items-start space-x-3">
+                      <MapPin className="h-6 w-6 text-secondary-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-primary-900 mb-2">Our Location</h4>
+                        <p className="text-gray-600">
+                          Mikocheni-B, Msikitini Road
+                          <br />
+                          Block 254, House No 66
+                          <br />
+                          Dar es Salaam, Tanzania, 76317
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start space-x-3">
+                      <Clock className="h-6 w-6 text-secondary-600 mt-1 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-primary-900 mb-2">Office Hours</h4>
+                        <p className="text-gray-600">
+                          Monday – Friday: 8:00 AM – 5:00 PM
+                          <br />
+                          Saturday & Sunday: Closed
+                        </p>
+                      </div>
+                    </div>
+                    <Button
+                      className="w-full sm:w-auto bg-secondary-600 hover:bg-secondary-700"
+                      onClick={() => window.open("https://maps.app.goo.gl/SBAUGcuAzCJCYQAD6", "_blank")}
+                    >
+                      <ExternalLink className="mr-2 h-5 w-5" />
+                      View on Google Maps
+                    </Button>
+                  </div>
+                  <div className="w-full h-80 rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.6789!2d39.237604!3d-6.754126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z2KzCsDQ1JzA1LjkiUyAzOcKwMTQnMjQuNCJF!5e0!3m2!1sen!2stz!4v1234567890"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      title="Phomas Diagnostics Office Location"
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* Contact Form and Map */}
