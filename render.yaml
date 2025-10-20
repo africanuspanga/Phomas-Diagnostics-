@@ -1,15 +1,13 @@
 services:
   - type: web
     name: phomas-diagnostics
-    env: node
+    env: static
     plan: free
-    buildCommand: npm ci && npm run build
-    startCommand: npm run start
+    buildCommand: npm ci && npm run build:static
+    staticPublishPath: ./out
     healthCheckPath: /api/health
     envVars:
       - key: NODE_ENV
         value: production
-      - key: NEXT_TELEMETRY_DISABLED
-        value: 1
     domains:
       - phomasdiagnostics.onrender.com

@@ -21,8 +21,16 @@ export default function ContactPageClient() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
+
+    // Construct WhatsApp message with form data
+    const whatsappMessage = `*New Contact Form Submission*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone || "Not provided"}%0A*Organization:* ${formData.organization || "Not provided"}%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}`
+
+    // WhatsApp URL with the phone number and pre-filled message
+    const whatsappURL = `https://wa.me/255678389075?text=${whatsappMessage}`
+
+    // Open WhatsApp in a new tab
+    window.open(whatsappURL, "_blank")
+
     // Reset form
     setFormData({
       name: "",
@@ -32,7 +40,6 @@ export default function ContactPageClient() {
       subject: "",
       message: "",
     })
-    alert("Thank you for your message! We will get back to you soon.")
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -90,7 +97,10 @@ export default function ContactPageClient() {
                   <h3 className="text-lg font-semibold text-primary-900 mb-3">{info.title}</h3>
                   <div className="space-y-1">
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-gray-600 text-sm md:text-base">
+                      <p
+                        key={detailIndex}
+                        className={`text-gray-600 text-sm md:text-base ${info.title === "Email" ? "break-all" : ""}`}
+                      >
                         {detail}
                       </p>
                     ))}
@@ -168,7 +178,7 @@ export default function ContactPageClient() {
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl md:text-3xl text-primary-900">Send us a Message</CardTitle>
                 <p className="text-gray-600 text-sm md:text-base">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we'll contact you via WhatsApp.
                 </p>
               </CardHeader>
               <CardContent className="p-4 md:p-6">
@@ -266,7 +276,7 @@ export default function ContactPageClient() {
 
                   <Button type="submit" className="w-full bg-primary-900 hover:bg-primary-800 h-11 md:h-12 text-base">
                     <Send className="mr-2 h-5 w-5" />
-                    Send Message
+                    Send via WhatsApp
                   </Button>
                 </form>
               </CardContent>

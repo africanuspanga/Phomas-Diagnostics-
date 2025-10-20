@@ -14,6 +14,7 @@ export default function Navigation() {
     { href: "/about-us", label: "About Us" },
     { href: "/our-story", label: "Our Story" },
     { href: "/products", label: "Products" },
+    { href: "/events", label: "Events" },
     { href: "/contact", label: "Contact" },
   ]
 
