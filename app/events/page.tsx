@@ -1,5 +1,5 @@
-import Image from "next/image"
 import { Calendar, MapPin } from "lucide-react"
+import { EventCarousel } from "@/components/event-carousel"
 
 export const metadata = {
   title: "Events | Phomas Diagnostics",
@@ -12,7 +12,7 @@ const events = [
     title: "Phomas Diagnostics Sponsors MELSAT 2024 in Dodoma",
     location: "Dodoma, Tanzania",
     date: "2024",
-    image: "/images/events/melsat-2024-dodoma.jpg",
+    images: ["/images/events/melsat-2024-dodoma.jpg", "/images/events/melsat-2024-dodoma-2.jpg"],
     description:
       "Phomas Diagnostics and Medical Supplies Limited was proud to be the main sponsor of the MELSAT 2024 exhibition held in Dodoma. The event brought together key stakeholders in the medical and laboratory sector to showcase innovations and strengthen partnerships that drive healthcare excellence in Tanzania. Our sponsorship reflects our continued commitment to supporting the growth and advancement of the medical industry nationwide.",
   },
@@ -21,7 +21,11 @@ const events = [
     title: "Phomas Diagnostics Exhibits at MELSAT 2025 in Mwanza",
     location: "Mwanza, Tanzania",
     date: "2025",
-    image: "/images/events/melsat-2025-mwanza.jpeg",
+    images: [
+      "/images/events/melsat-2025-mwanza.jpeg",
+      "/images/events/melsat-2025-mwanza-2.png",
+      "/images/events/melsat-2025-mwanza-3.png",
+    ],
     description:
       "Phomas Diagnostics and Medical Supplies Limited participated as an exhibitor at the MELSAT 2025 exhibition in Mwanza. The event provided an excellent platform to engage with healthcare professionals, demonstrate our wide range of quality laboratory and medical products, and explore new collaborations that enhance healthcare delivery across Tanzania.",
   },
@@ -29,10 +33,28 @@ const events = [
     id: 3,
     title: "Installation of Humastar 100 at Dr. Atiman Memorial Council Designated Hospital Sumbawanga",
     location: "Rukwa, Tanzania",
-    date: "2024",
-    image: "/images/events/humastar-installation.jpg",
+    date: "2025",
+    images: ["/images/events/humastar-installation.jpg"],
     description:
       "Phomas Diagnostics successfully completed the installation of the Humastar 100 at Dr. Artiman Hospital in Rukwa. This installation marks another step in our mission to enhance laboratory capacity and improve diagnostic accuracy across Tanzania. Our technical team provided full setup, calibration, and user training to ensure optimal performance and sustainable operation of the equipment.",
+  },
+  {
+    id: 4,
+    title: "Installation of Humastar 100 at St. Benedict Ndanda Referral Hospital in Mtwara Region",
+    location: "Mtwara, Tanzania",
+    date: "2025",
+    images: ["/images/events/ndanda-1.png", "/images/events/ndanda-2.jpeg"],
+    description:
+      "Phomas Diagnostics successfully completed the installation of the Humastar 100 a chemistry analyzer at Ndanda Hospital in Mtwara. This installation marks another step in our mission to enhance laboratory capacity and improve diagnostic accuracy across Tanzania. Our technical team provided full setup, calibration, and user training to ensure optimal performance and sustainable operation of the equipment.",
+  },
+  {
+    id: 5,
+    title: "Installation of Humastar 200 and HumaNex A1c Variant at Songambele Hospital in Simiyu",
+    location: "Simiyu, Tanzania",
+    date: "2025",
+    images: ["/images/events/songambele-1.jpg", "/images/events/songambele-2.jpg", "/images/events/songambele-3.jpg"],
+    description:
+      "Phomas Diagnostics successfully completed the installation of the Humastar 200 next generation a chemistry analyzer and the HumaNex A1c Variant for HbA1c testing portfolio at Sombambele Hospital in Simiyu. This installation marks another step in our mission to enhance laboratory capacity and improve diagnostic accuracy across Tanzania. Our technical team provided full setup, calibration, and user training to ensure optimal performance and sustainable operation of the equipment.",
   },
 ]
 
@@ -40,10 +62,10 @@ export default function EventsPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-primary-900 to-primary-700 text-white py-16">
+      <section className="bg-gradient-to-r from-primary-900 to-primary-700 text-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-balance">Our Events & Activities</h1>
-          <p className="text-xl text-gray-100 max-w-3xl text-pretty">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 text-balance">Our Events & Activities</h1>
+          <p className="text-lg md:text-xl text-gray-100 max-w-3xl text-pretty">
             Discover how Phomas Diagnostics is actively contributing to the advancement of healthcare in Tanzania
             through exhibitions, installations, and partnerships.
           </p>
@@ -51,18 +73,15 @@ export default function EventsPage() {
       </section>
 
       {/* Events Grid */}
-      <section className="py-16">
+      <section className="py-8 md:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
             {events.map((event) => (
               <article
                 key={event.id}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                {/* Event Image */}
-                <div className="relative h-64 w-full">
-                  <Image src={event.image || "/placeholder.svg"} alt={event.title} fill className="object-cover" />
-                </div>
+                <EventCarousel images={event.images} alt={event.title} />
 
                 {/* Event Content */}
                 <div className="p-6">
