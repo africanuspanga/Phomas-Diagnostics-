@@ -31,7 +31,7 @@ const features = [
   {
     icon: Users,
     title: "Expert Support",
-    description: "30+ years of experience with comprehensive technical support and training.",
+    description: "10+ years of local experience with comprehensive technical support and training.",
   },
   {
     icon: Award,
@@ -107,19 +107,21 @@ function SectionHeading({
   dark?: boolean
 }) {
   return (
-    <div className="text-center max-w-3xl mx-auto mb-14 md:mb-16">
-      <span className="inline-block text-sm font-semibold uppercase tracking-widest text-secondary-600 mb-3">
+    <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+      <span className="inline-block text-xs sm:text-sm font-semibold uppercase tracking-widest text-secondary-600 mb-3">
         {eyebrow}
       </span>
       <h2
-        className={`text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4 ${
+        className={`text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight mb-4 ${
           dark ? "text-white" : "text-primary-900"
         }`}
       >
         {title}
       </h2>
       {description && (
-        <p className={`text-lg leading-relaxed ${dark ? "text-gray-300" : "text-gray-600"}`}>{description}</p>
+        <p className={`text-base sm:text-lg leading-relaxed ${dark ? "text-gray-300" : "text-gray-600"}`}>
+          {description}
+        </p>
       )}
     </div>
   )
@@ -170,12 +172,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative min-h-[92vh] flex items-center overflow-hidden">
+      <section className="relative min-h-[100svh] sm:min-h-[92vh] flex items-center overflow-hidden">
         <div className="absolute inset-0">
           <Image
             src="/images/hero-female-doctor-vaccine.jpeg"
             alt="Laboratory scientist at work"
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />
@@ -183,28 +186,28 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-transparent to-transparent" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32 w-full">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 md:py-32 w-full">
           <div className="max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-1.5 text-sm font-medium text-white mb-6">
-              <ShieldCheck className="h-4 w-4 text-secondary-500" />
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-1.5 text-xs sm:text-sm font-medium text-white mb-6">
+              <ShieldCheck className="h-4 w-4 text-secondary-500 shrink-0" />
               Trusted in Tanzania for over 10 years
             </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6">
+            <h1 className="text-[2.5rem] leading-[1.1] sm:text-5xl sm:leading-[1.05] lg:text-6xl xl:text-7xl font-bold text-white tracking-tight mb-6">
               Tanzania&apos;s Premier{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-500 to-secondary-100">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary-400 to-secondary-100">
                 Medical Supply
               </span>{" "}
               Partner
             </h1>
-            <p className="text-lg sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-xl">
+            <p className="text-base sm:text-xl text-gray-200 leading-relaxed mb-8 max-w-xl">
               World-class laboratory equipment, diagnostic analyzers, and medical supplies from trusted global
               manufacturers — delivered and supported nationwide.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button
                 asChild
                 size="lg"
-                className="bg-secondary-600 hover:bg-secondary-700 text-white px-8 text-base shadow-lg shadow-secondary-600/30"
+                className="bg-secondary-600 hover:bg-secondary-700 active:scale-[0.98] text-white px-8 text-base shadow-lg shadow-secondary-600/30 transition-transform"
               >
                 <Link href="/products">
                   Explore Our Products <ArrowRight className="ml-2 h-5 w-5" />
@@ -214,7 +217,7 @@ export default function HomePage() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="border-white/40 text-white hover:bg-white hover:text-primary-900 bg-white/5 backdrop-blur-sm px-8 text-base"
+                className="border-white/40 text-white hover:bg-white hover:text-primary-900 active:scale-[0.98] bg-white/5 backdrop-blur-sm px-8 text-base transition-transform"
               >
                 <Link href="/contact">Request a Quote</Link>
               </Button>
@@ -222,11 +225,11 @@ export default function HomePage() {
           </div>
 
           {/* Stats bar */}
-          <div className="mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-white/15 bg-white/15 backdrop-blur-md">
+          <div className="mt-10 sm:mt-16 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-px rounded-2xl overflow-hidden border border-white/15 bg-white/15 backdrop-blur-md">
             {stats.map((stat) => (
-              <div key={stat.label} className="bg-primary-900/60 px-6 py-5 text-center lg:text-left">
-                <div className="text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
-                <div className="text-sm text-gray-300 mt-1">{stat.label}</div>
+              <div key={stat.label} className="bg-primary-900/60 px-4 py-4 sm:px-6 sm:py-5 text-center lg:text-left">
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{stat.value}</div>
+                <div className="text-xs sm:text-sm text-gray-300 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -234,7 +237,7 @@ export default function HomePage() {
       </section>
 
       {/* Why Choose Section */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-16 md:py-24 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Why Phomas"
@@ -246,7 +249,7 @@ export default function HomePage() {
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="group bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="group bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 active:scale-[0.98] transition-all duration-300"
               >
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-secondary-600 to-secondary-700 flex items-center justify-center mb-6 shadow-lg shadow-secondary-600/25 group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-7 w-7 text-white" />
@@ -260,7 +263,7 @@ export default function HomePage() {
       </section>
 
       {/* Product Categories Section */}
-      <section className="py-20 md:py-28">
+      <section className="py-16 md:py-24 lg:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Solutions"
@@ -273,13 +276,14 @@ export default function HomePage() {
               <Link
                 key={category.title}
                 href="/products"
-                className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300"
+                className="group rounded-2xl overflow-hidden bg-white border border-gray-100 shadow-sm hover:shadow-xl active:scale-[0.98] transition-all duration-300"
               >
                 <div className="relative h-52 overflow-hidden bg-gray-50">
                   <Image
                     src={category.image}
                     alt={category.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
@@ -308,7 +312,7 @@ export default function HomePage() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 md:py-28 bg-primary-900 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-28 bg-primary-900 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-[0.04]"
           style={{
@@ -319,13 +323,13 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
-              <span className="inline-block text-sm font-semibold uppercase tracking-widest text-secondary-500 mb-3">
+              <span className="inline-block text-xs sm:text-sm font-semibold uppercase tracking-widest text-secondary-500 mb-3">
                 What We Do
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight mb-6">
                 Comprehensive Medical & Laboratory Solutions
               </h2>
-              <p className="text-lg text-gray-300 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-gray-300 leading-relaxed mb-8">
                 From hospitals and private labs to academic institutions and research facilities, we provide CE-marked
                 equipment and comprehensive support that meets your specific diagnostic needs.
               </p>
@@ -337,30 +341,35 @@ export default function HomePage() {
                   </li>
                 ))}
               </ul>
-              <Button asChild size="lg" className="bg-secondary-600 hover:bg-secondary-700 text-white px-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-secondary-600 hover:bg-secondary-700 active:scale-[0.98] text-white px-8 transition-transform"
+              >
                 <Link href="/contact">
                   Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>
 
-            <div className="relative">
+            <div className="relative mt-4 lg:mt-0">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
                   src="/images/medical-supplies.png"
                   alt="Medical laboratory equipment and supplies"
                   width={600}
                   height={400}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   className="w-full h-auto"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-2xl p-5 flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-secondary-50 flex items-center justify-center">
-                  <Zap className="h-6 w-6 text-secondary-600" />
+              <div className="absolute -bottom-4 left-3 right-3 sm:right-auto sm:-bottom-6 sm:-left-6 bg-white rounded-2xl shadow-2xl px-4 py-3 sm:p-5 flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-secondary-50 flex items-center justify-center shrink-0">
+                  <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-secondary-600" />
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-primary-900">10+ Years</div>
-                  <div className="text-sm text-gray-500">Proven Reliability</div>
+                  <div className="text-xl sm:text-2xl font-bold text-primary-900">10+ Years</div>
+                  <div className="text-xs sm:text-sm text-gray-500">Proven Reliability</div>
                 </div>
               </div>
             </div>
@@ -369,7 +378,7 @@ export default function HomePage() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-16 md:py-24 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
             eyebrow="Our Partners"
@@ -388,7 +397,7 @@ export default function HomePage() {
                   alt={partner.name}
                   width={120}
                   height={60}
-                  className="max-w-full h-auto max-h-14 object-contain"
+                  className="w-auto h-auto max-w-full max-h-14 object-contain"
                 />
               </div>
             ))}
@@ -412,7 +421,7 @@ export default function HomePage() {
       </section>
 
       {/* App Download Section */}
-      <section className="py-20 md:py-28 relative overflow-hidden">
+      <section className="py-16 md:py-24 lg:py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-secondary-800" />
         <div
           className="absolute inset-0 opacity-[0.05]"
@@ -427,14 +436,14 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white mb-6">
-                <Smartphone className="h-4 w-4 text-secondary-500" />
+              <span className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs sm:text-sm font-medium text-white mb-6">
+                <Smartphone className="h-4 w-4 text-secondary-500 shrink-0" />
                 Now on Mobile
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
                 Download Our App
               </h2>
-              <p className="text-lg text-gray-200 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+              <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
                 Browse our full product catalogue, request quotes, and track your orders right from your phone. Get
                 the Phomas Diagnostics app today.
               </p>
@@ -482,9 +491,9 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-gray-50">
+      <section className="py-16 md:py-24 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-secondary-700 to-secondary-600 px-8 py-16 md:px-16 md:py-20 text-center shadow-2xl">
+          <div className="relative rounded-3xl overflow-hidden bg-gradient-to-r from-secondary-700 to-secondary-600 px-6 py-12 sm:px-8 sm:py-16 md:px-16 md:py-20 text-center shadow-2xl">
             <div
               className="absolute inset-0 opacity-[0.06]"
               style={{
@@ -498,10 +507,10 @@ export default function HomePage() {
                   <HeartPulse className="h-8 w-8 text-white" />
                 </div>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Upgrade Your Laboratory?
               </h2>
-              <p className="text-lg md:text-xl text-secondary-50 mb-10 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-secondary-50 mb-10 max-w-2xl mx-auto leading-relaxed">
                 Join hospitals, labs, and research institutions across Tanzania who trust Phomas Diagnostics for
                 reliable, world-class medical equipment and diagnostic solutions.
               </p>
@@ -509,7 +518,7 @@ export default function HomePage() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-white text-secondary-700 hover:bg-gray-100 px-8 text-base shadow-lg"
+                  className="bg-white text-secondary-700 hover:bg-gray-100 active:scale-[0.98] px-8 text-base shadow-lg transition-transform"
                 >
                   <Link href="/products">
                     View Products <ArrowRight className="ml-2 h-5 w-5" />
@@ -519,7 +528,7 @@ export default function HomePage() {
                   asChild
                   size="lg"
                   variant="outline"
-                  className="border-white/50 text-white hover:bg-white/10 bg-transparent px-8 text-base"
+                  className="border-white/50 text-white hover:bg-white/10 active:scale-[0.98] bg-transparent px-8 text-base transition-transform"
                 >
                   <Link href="/contact">Get a Quote</Link>
                 </Button>
